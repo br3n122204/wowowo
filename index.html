@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Access :: Restricted</title>
+
+    <!-- Link to your updated CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="background-overlay"></div>
+
+    <div class="terminal-window">
+        <header class="terminal-header">
+            <span class="terminal-title">SECURE_SHELL :: ACCESS_PORTAL</span>
+            <div class="terminal-controls">
+                <span class="control-btn minimize">_</span>
+                <span class="control-btn maximize">[]</span>
+                <span class="control-btn close">X</span>
+            </div>
+        </header>
+
+        <div class="terminal-body">
+            <div id="hacker-typer-output">
+                <span class="prompt">> </span><span id="typer"></span><span class="cursor">|</span>
+            </div>
+
+            <div class="form-container">
+                <div class="form-toggle">
+                    <button id="showLogin" class="active">Login</button>
+                    <button id="showSignup">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="active-form">
+                    <h2>// System Login //</h2>
+                    <div class="input-group">
+                        <label for="loginUser">Agent_ID:</label>
+                        <input type="text" id="loginUser" name="loginUser" required placeholder="Enter Username/Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="loginPass">Pass_Key:</label>
+                        <input type="password" id="loginPass" name="loginPass" required placeholder="Enter Password">
+                    </div>
+                    <button type="submit">Authenticate</button>
+                    <p id="loginMessage" class="message"></p>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signupForm">
+                    <h2>// New Agent Registration //</h2>
+                    <div class="input-group">
+                        <label for="signupUser">Choose_ID:</label>
+                        <input type="text" id="signupUser" name="signupUser" required placeholder="Desired Username">
+                    </div>
+                    <div class="input-group">
+                        <label for="signupEmail">Secure_Email:</label>
+                        <input type="email" id="signupEmail" name="signupEmail" required placeholder="Valid Email Address">
+                    </div>
+                    <div class="input-group">
+                        <label for="signupPass">Set_Pass_Key:</label>
+                        <input type="password" id="signupPass" name="signupPass" required placeholder="Create Secure Password">
+                    </div>
+                    <div class="input-group">
+                        <label for="signupConfirmPass">Confirm_Key:</label>
+                        <input type="password" id="signupConfirmPass" name="signupConfirmPass" required placeholder="Confirm Password">
+                    </div>
+                    <button type="submit">Register Agent</button>
+                    <p id="signupMessage" class="message"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your updated JS file -->
+    <script src="index.js"></script>
+</body>
+
+</html>
